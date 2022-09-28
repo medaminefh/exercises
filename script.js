@@ -83,4 +83,57 @@ const posts = [
 
 // write a program that returns only the posts that have more than or equal to 5 reactions
 
+// const returnReactions = (posts) => {
+//   for (let post = 0; post < posts.length; post++) {
+//     if (post.reactions >= 5) {
+//       return post;
+//     }
+//   }
+// };
+
+// console.log(returnReactions(posts));
+
+// ES5
+
+// posts [  ]
+/* 
+const array = [1, 2, 3, 4, 5, 6];
+
+console.log(array[5]);
+
+array[5] = "another type";
+
+console.log(array[5]); */
+
+// let arr = []; // array
+
+// for (let i = 0; i < posts.length; i++) {
+//   // {id: 6,title: "Dave wasn't exactly sure how he had ended up", reactions: 5 },
+
+//   if (posts[i].reactions >= 5) {
+//     let arrLength = arr.length;
+//     arr[arrLength] = posts[i];
+//   }
+// }
+
+// console.log(arr);
+
+/* let arr = posts.filter(function (elem) {
+  // posts[i] { }
+  if (elem.reactions >= 5) {
+    return true;
+  }
+});
+
+console.log(arr); */
+
 // write a program that returns the posts that have a history tag
+
+let historyPosts = posts.filter(function (elem) {
+  // elem.tags => tags: ["fiction", "history", "crime"]
+  if (elem.tags.includes("history")) {
+    return true;
+  }
+});
+
+console.log(historyPosts);
